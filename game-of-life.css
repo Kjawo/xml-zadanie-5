@@ -1,0 +1,123 @@
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+:root
+{
+    --cellAliveColor: hsl(10, 23%, 69%);
+    --cellDeadColor: hsl(328, 68%, 15%);
+    --cellAliveHoverColor: hsl(10, 23%, 79%);
+    --cellDeadHoverColor: hsl(328, 68%, 25%);
+    --cellBorderColor: hsl(337, 31%, 26%);
+}
+html, body
+{
+    width: 100%;
+    height: 100%;
+}
+body
+{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+#root
+{
+    width: 100%;
+    height: 100%;
+}
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+#Board
+{
+    width: 100%;
+    height: 85%;
+}
+div
+{
+    line-height: 0;
+}
+div:focus
+{
+    outline: none;
+}
+rect.CellAlive, rect.CellDead
+{
+    margin: 0;
+    transition: fill 100ms;
+    stroke: var(--cellBorderColor);
+}
+rect.CellAlive
+{
+    fill: var(--cellAliveColor);
+}
+rect.CellDead
+{
+    fill: var(--cellDeadColor);
+}
+rect.CellAlive:hover
+{
+    fill: var(--cellAliveHoverColor);
+}
+rect.CellDead:hover
+{
+    fill: var(--cellDeadHoverColor);
+}
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+#UserInterface
+{
+    width: 100%;
+    height: 15%;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    color: white;
+    font-family: 'DejaVu Sans Light', sans-serif;
+
+    z-index: 1;
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+#MainTitle
+{
+    width: 50%;
+    height: 100%;
+    font-size: 450%;
+    font-style: italic;
+    letter-spacing: 0.2em;
+    transition: font-size 200ms;
+}
+#MainTitle:hover
+{
+    font-size: 460%;
+}
+#AdditionalInfo
+{
+    width: 50%;
+    height: 100%;
+    font-size: 110%;
+    transition: font-size 200ms;
+}
+#AdditionalInfo:hover
+{
+    font-size: 112.5%;
+}
+.centered
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-all;
+
+    filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.5));
+
+    color: rgba(100%,100%,100%,0.8);
+    transition: color 200ms;
+}
+.centered:hover
+{
+    color: rgba(100%,100%,100%,1);
+}
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
